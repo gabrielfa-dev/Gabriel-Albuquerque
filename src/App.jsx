@@ -37,13 +37,44 @@ function App() {
               An undergraduate student at CIn/UFPE, passionate about technology and dedicated to developing solid technical and analytical skills.
             </p>
             
-            <div className="contact-wrapper">
-              <span className="contact-label">email:</span>
-              <span className="contact-email">gabrielfa.dev@gmail.com</span>
+            {/* Caixa de Contato & Redes Sociais */}
+            <div className="contact-card">
+              <div className="contact-card-header">
+                <span className="contact-card-title"> CONTACT </span>
+              </div>
+              
+              <div className="contact-card-body">
+                <div className="contact-item">
+                  <span className="contact-label" style={{ color: '#ffffff' }}>email:</span>
+                  <span className="contact-value" style={{ color: '#ffffff', cursor: 'default' }}>
+                    gabrielfa.dev@gmail.com
+                  </span>
+                </div>
+                
+                <div className="contact-divider"></div>
+
+                <div className="social-links-grid">
+                  <a 
+                    href="https://www.linkedin.com/in/gabriel-albuquerque-025419428/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="social-box-link"
+                  >
+                    LinkedIn <span>&rarr;</span>
+                  </a>
+                  <a 
+                    href="https://github.com/gabrielfa-dev" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="social-box-link"
+                  >
+                    GitHub <span>&rarr;</span>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
 
-          
           <div className="hero-image-column">
           </div>
 

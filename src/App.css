@@ -146,26 +146,92 @@ body {
   font-weight: 400;
 }
 
-/* === ÁREA DE CONTATO === */
-.contact-wrapper {
+/* === CAIXA DE CONTATO E REDES SOCIAIS === */
+.contact-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 1.5rem;
+  max-width: 480px;
+  margin-top: 2rem;
+  transition: border-color 0.3s ease;
+}
+
+
+
+.contact-card-header {
+  margin-bottom: 1rem;
+}
+
+.contact-card-title {
+  font-family: monospace;
+  font-size: 0.8rem;
+  color: var(--accent-color);
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.contact-item {
   display: flex;
   align-items: center;
-  gap: 0.4rem; 
+  gap: 0.5rem;
 }
 
 .contact-label {
   font-family: monospace;
-  color: var(--text-primary); 
-  font-size: 1rem;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
 }
 
-.contact-email {
-  display: inline-block;
+.contact-value {
   color: var(--text-primary);
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 600;
- 
-  
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-value:hover {
+  color: var(--accent-color);
+}
+
+.contact-divider {
+  height: 1px;
+  background-color: var(--border-color);
+  margin: 1.2rem 0;
+}
+
+.social-links-grid {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-box-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  padding: 0.6rem 1.2rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.social-box-link span {
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+.social-box-link:hover {
+  border-color: var(--text-primary);
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.social-box-link:hover span {
+  transform: translateX(3px);
+  color: var(--accent-color);
 }
 
 /* === SEÇÕES GERAIS === */
@@ -245,7 +311,6 @@ body {
 
 
 /* ================================ PÁGINA SOBRE MIM =======================================*/
-
 
 .page-header {
   margin-bottom: 5rem;
@@ -328,6 +393,7 @@ body {
   font-weight: 500;
   font-family: monospace; 
 }
+
 /* === PORTFOLIO STYLING === */
 
 .projects-grid {
