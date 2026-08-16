@@ -1,184 +1,441 @@
-.counter {
-  font-size: 16px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  color: var(--accent);
-  background: var(--accent-bg);
-  border: 2px solid transparent;
-  transition: border-color 0.3s;
-  margin-bottom: 24px;
+/* Fonte Plus Jakarta Sans */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
-  &:hover {
-    border-color: var(--accent-border);
-  }
-  &:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-  }
+/* Cores Base */
+:root {
+  --bg-main: #0c0c0e;        
+  --bg-card: #151518;        
+  --border-color: #27272a;   
+  --text-primary: #ffffff;
+  --text-secondary: #a1a1aa;
+  --accent-color: #2563eb;   
 }
 
-.hero {
-  position: relative;
-
-  .base,
-  .framework,
-  .vite {
-    inset-inline: 0;
-    margin: 0 auto;
-  }
-
-  .base {
-    width: 170px;
-    position: relative;
-    z-index: 0;
-  }
-
-  .framework,
-  .vite {
-    position: absolute;
-  }
-
-  .framework {
-    z-index: 1;
-    top: 34px;
-    height: 28px;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg)
-      scale(1.4);
-  }
-
-  .vite {
-    z-index: 0;
-    top: 107px;
-    height: 26px;
-    width: auto;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg)
-      scale(0.8);
-  }
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
-#center {
+.page-wrapper {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: 25px;
-  place-content: center;
-  place-items: center;
-  flex-grow: 1;
-
-  @media (max-width: 1024px) {
-    padding: 32px 20px 24px;
-    gap: 18px;
-  }
 }
 
-#next-steps {
+/* === NAVBAR === */
+.navbar-header {
+  border-bottom: 1px solid var(--border-color);
+  background-color: rgba(12, 12, 14, 0.9);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
   display: flex;
-  border-top: 1px solid var(--border);
-  text-align: left;
-
-  & > div {
-    flex: 1 1 0;
-    padding: 32px;
-    @media (max-width: 1024px) {
-      padding: 24px 20px;
-    }
-  }
-
-  .icon {
-    margin-bottom: 16px;
-    width: 22px;
-    height: 22px;
-  }
-
-  @media (max-width: 1024px) {
-    flex-direction: column;
-    text-align: center;
-  }
+  justify-content: space-between;
+  align-items: center;
 }
 
-#docs {
-  border-right: 1px solid var(--border);
-
-  @media (max-width: 1024px) {
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-  }
+.nav-logo, .nav-placeholder {
+  flex: 1; 
 }
 
-#next-steps ul {
-  list-style: none;
-  padding: 0;
+.nav-logo a {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-decoration: none;
+  letter-spacing: -0.5px;
+}
+
+.nav-logo span {
+  color: var(--accent-color);
+}
+
+.nav-links {
+  flex: 1;
   display: flex;
-  gap: 8px;
-  margin: 32px 0 0;
-
-  .logo {
-    height: 18px;
-  }
-
-  a {
-    color: var(--text-h);
-    font-size: 16px;
-    border-radius: 6px;
-    background: var(--social-bg);
-    display: flex;
-    padding: 6px 12px;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    transition: box-shadow 0.3s;
-
-    &:hover {
-      box-shadow: var(--shadow);
-    }
-    .button-icon {
-      height: 18px;
-      width: 18px;
-    }
-  }
-
-  @media (max-width: 1024px) {
-    margin-top: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    li {
-      flex: 1 1 calc(50% - 8px);
-    }
-
-    a {
-      width: 100%;
-      justify-content: center;
-      box-sizing: border-box;
-    }
-  }
+  justify-content: center;
+  gap: 2.5rem;
 }
 
-#spacer {
-  height: 88px;
-  border-top: 1px solid var(--border);
-  @media (max-width: 1024px) {
-    height: 48px;
-  }
+.nav-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-.ticks {
-  position: relative;
+.nav-link:hover, .nav-link.active {
+  color: var(--text-primary);
+}
+
+/* === CONTAINER PRINCIPAL === */
+.content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
   width: 100%;
+  box-sizing: border-box;
+}
 
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    top: -4.5px;
-    border: 5px solid transparent;
-  }
+/* === HERO SECTION === */
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 7rem;
+  gap: 2rem;
+}
 
-  &::before {
-    left: 0;
-    border-left-color: var(--border);
-  }
-  &::after {
-    right: 0;
-    border-right-color: var(--border);
-  }
+.hero-text-column {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero-image-column {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Título Gigante */
+.hero-hello {
+  font-size: 4.5rem;
+  font-weight: 800;
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: -2px;
+  color: var(--text-primary);
+}
+
+/* Nome Menor */
+.hero-name {
+  font-size: 2.5rem; 
+  font-weight: 700;
+  margin: 0.5rem 0 0 0; 
+  line-height: 1.2;
+  letter-spacing: -1px;
+  color: var(--text-secondary);
+}
+
+.hero-role {
+  font-family: monospace; 
+  font-size: 1.05rem;
+  color: var(--accent-color);
+  margin: 1.5rem 0;
+}
+
+.hero-bio {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 500px; 
+  margin-bottom: 2.5rem;
+  font-weight: 400;
+}
+
+/* === ÁREA DE CONTATO === */
+.contact-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem; 
+}
+
+.contact-label {
+  font-family: monospace;
+  color: var(--text-primary); 
+  font-size: 1rem;
+}
+
+.contact-email {
+  display: inline-block;
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 600;
+ 
+  
+}
+
+/* === SEÇÕES GERAIS === */
+.section-block {
+  margin-bottom: 5rem;
+}
+
+.section-subtitle {
+  text-align: left; 
+  color: var(--accent-color);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+/* === CARDS DE EDUCAÇÃO === */
+.square-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 2rem;
+  border-radius: 0; 
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+}
+
+.card-details {
+  margin: 0 0 0.5rem 0;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.date-tag {
+  font-family: monospace;
+  color: var(--accent-color);
+  font-size: 0.9rem;
+}
+
+/* === GRID DE INTERESSES === */
+.square-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.square-item {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 0;
+}
+
+.item-title {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* === RODAPÉ === */
+.footer-credits {
+  margin-top: auto;
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+  padding: 2rem;
+  color: #3f3f46;
+  font-size: 0.85rem;
+}
+
+
+/* ================================ PÁGINA SOBRE MIM =======================================*/
+
+
+.page-header {
+  margin-bottom: 5rem;
+}
+
+.page-title {
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0 0 1rem 0;
+  letter-spacing: -2px;
+}
+
+.page-description {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+  max-width: 600px;
+  margin: 0;
+}
+
+.about-block {
+  margin-bottom: 4rem;
+}
+
+.about-content p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 1.2rem;
+  font-weight: 400;
+  max-width: 800px; 
+}
+
+.about-content strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Lista de Interesses */
+.interest-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 1.5rem 0;
+  max-width: 800px;
+}
+
+.interest-list li {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.interest-list li::before {
+  content: '>';
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  font-family: monospace;
+  font-weight: bold;
+}
+
+/* Tags de Habilidades Técnicas */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.5rem;
+}
+
+.skill-tag {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: monospace; 
+}
+/* === PORTFOLIO STYLING === */
+
+.projects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 800px;
+}
+
+.project-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 2.5rem;
+  transition: border-color 0.3s ease;
+}
+
+.project-card:hover {
+  border-color: var(--text-primary);
+}
+
+.project-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.project-number {
+  font-family: monospace;
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+.discipline-badge {
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+  padding: 0.2rem 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.project-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 1rem 0;
+}
+
+.project-description {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+/* Seção de Objetivo */
+.project-section {
+  border-left: 2px solid var(--accent-color);
+  padding-left: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-section-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 0.4rem 0;
+}
+
+.project-section-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Moldura e Imagem do Protótipo */
+.project-image-wrapper {
+  width: 100%;
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  background-color: #111;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.project-links {
+  margin-top: 1.5rem;
+}
+
+.project-link {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.project-link:hover {
+  color: var(--accent-color);
 }
