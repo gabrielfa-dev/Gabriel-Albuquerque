@@ -24,7 +24,7 @@ function Portfolio() {
       <main className="content-container">
         {/* Page Header */}
         <div className="page-header">
-          <h1 className="page-title">Portfolio.</h1>
+          <h1 className="page-title">Portfolio</h1>
           <p className="page-description">
             Academic and personal projects developed during the Information Systems program.
           </p>
@@ -36,48 +36,36 @@ function Portfolio() {
           {/* PROJECT 01 */}
           <article className="project-card">
             
-            {/* Disciplina / Course Tag */}
-            <div className="project-meta">
-              <span className="project-number">01</span>
-              <span className="discipline-badge">Course: Web Development</span>
-            </div>
-
             {/* Nome do Projeto */}
-            <h3 className="project-title">Academic Management System</h3>
+            <h3 className="project-title">FiscRecife</h3>
 
             {/* Breve Descrição */}
             <p className="project-description">
-              A full-stack web application designed to help university students manage schedules, assignments, and academic performance in one centralized platform.
+              A web platform built using Lovable for the CAD course aimed at increasing transparency and efficiency in the management and monitoring of public works across the city of Recife.
             </p>
 
             {/* Objetivo do Sistema / Solução Proposta */}
             <div className="project-section">
               <h4 className="project-section-title">System Objective</h4>
               <p className="project-section-text">
-                To streamline student workflow by replacing fragmented spreadsheet tracking with an integrated web system that automates deadline notifications and visualizes grade averages.
+                To enhance citizen oversight and public administration efficiency by providing an intuitive platform where citizens can track the status, budgets, and timelines of ongoing public infrastructure projects in Recife.
               </p>
-            </div>
-
-            {/* Imagem do Protótipo / Interface */}
-            <div className="project-image-wrapper">
-              <img 
-                src="/project1-preview.png" 
-                alt="Academic Management System Interface Prototype" 
-                className="project-image"
-              />
             </div>
 
             {/* Stack de Tecnologias */}
             <div className="skills-grid">
-              <span className="skill-tag">React</span>
-              <span className="skill-tag">JavaScript</span>
-              <span className="skill-tag">CSS Modules</span>
+              <span className="skill-tag">Lovable</span>
             </div>
 
-            {/* Links do Projeto */}
+            {/* Link do Site no Lovable */}
             <div className="project-links">
-              <a href="kink do github pra eu colocar dps" target="_blank" rel="noopener noreferrer" className="project-link">
-                GitHub Repository &rarr;
+              <a 
+                href="https://fisc-recife.lovable.app/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="project-link"
+              >
+                Visit Website &rarr;
               </a>
             </div>
           </article>
@@ -86,47 +74,38 @@ function Portfolio() {
           {/* PROJECT 02 */}
           <article className="project-card">
             
-            {/* Disciplina / Course Tag */}
-            <div className="project-meta">
-              <span className="project-number">02</span>
-              <span className="discipline-badge">Course: Database Systems</span>
-            </div>
+            
 
             {/* Nome do Projeto */}
-            <h3 className="project-title">Automated Data Pipeline & Analytics</h3>
+            <h3 className="project-title">PacIp</h3>
 
             {/* Breve Descrição */}
             <p className="project-description">
-              An automated ETL (Extract, Transform, Load) pipeline that aggregates, processes, and displays real-time operational data for business decision-making.
+              A remake of the classic Pac-Man game developed in Python using the Pygame library for the Introduction to Programming course.
             </p>
 
             {/* Objetivo do Sistema / Solução Proposta */}
             <div className="project-section">
               <h4 className="project-section-title">System Objective</h4>
               <p className="project-section-text">
-                To automate the extraction of unstructured datasets, transform them via Python scripts, and store clean records into a relational database to provide actionable business dashboards.
+                To recreate classic arcade game mechanics, ghost movements, collision logic, and scoring systems while applying fundamental programming logic and algorithms in Python.
               </p>
-            </div>
-
-            {/* Imagem do Protótipo / Interface */}
-            <div className="project-image-wrapper">
-              <img 
-                src="/project2-preview.png" 
-                alt="Automated Data Pipeline Dashboard Prototype" 
-                className="project-image"
-              />
             </div>
 
             {/* Stack de Tecnologias */}
             <div className="skills-grid">
               <span className="skill-tag">Python</span>
-              <span className="skill-tag">n8n</span>
-              <span className="skill-tag">SQL</span>
+              <span className="skill-tag">Pygame</span>
             </div>
 
-            {/* Links do Projeto */}
+            {/* Link do Repositório GitHub */}
             <div className="project-links">
-              <a href="https://vou colocar aqui depoissssss aaaaaaaaaa" target="_blank" rel="noopener noreferrer" className="project-link">
+              <a 
+                href="https://github.com/ericsalmeida/projetoIP" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="project-link"
+              >
                 GitHub Repository &rarr;
               </a>
             </div>
