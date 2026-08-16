@@ -1,16 +1,25 @@
-# React + Vite
+#  Personal Portfolio — Gabriel Albuquerque
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Portfólio pessoal desenvolvido para apresentar meus projetos, competências e trajetória acadêmica no curso de **Sistemas de Informação** no CIn/UFPE.
 
-Currently, two official plugins are available:
+ **Acesse o site:** [gabrielalbuquerque.vercel.app](https://seu-link.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+##  Tecnologias Utilizadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React** + **Vite**
+- **React Router** (Navegação SPA)
+- **CSS3** (Estilização customizada em Dark Mode)
 
-## Expanding the Oxlint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+##  Contato
+
+- **E-mail:** gabrielfa.dev@gmail.com
+- **LinkedIn:** [Gabriel Albuquerque](https://www.linkedin.com/in/gabriel-albuquerque-025419428/)
+- **GitHub:** [@gabrielfa-dev](https://github.com/gabrielfa-dev)
+
+---
+
+© 2026 Gabriel Freitas de Albuquerque.
