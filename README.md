@@ -2,7 +2,7 @@
 
 Portfólio pessoal desenvolvido para apresentar meus projetos, competências e trajetória acadêmica no curso de **Sistemas de Informação** no CIn/UFPE.
 
- **Acesse o site:** [gabrielalbuquerque.vercel.app](https://seu-link.vercel.app)
+
 
 ---
 
